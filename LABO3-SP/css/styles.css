@@ -105,19 +105,36 @@ button {
 }
 
 .spinner {
-    border: 4px solid rgba(0, 0, 0, .1);
-    width: 40px;
-    height: 40px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.spinner:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
     border-radius: 50%;
-    border-left-color: #007bff;
-    animation: spin 1s linear infinite;
+    border: 6px solid #007bff;
+    border-color: #007bff transparent #007bff transparent;
+    animation: spinnerAnimation 1.2s linear infinite;
 }
 
-@keyframes spin {
+@keyframes spinnerAnimation {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
+}
+
+.formularioContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
