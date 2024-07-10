@@ -116,7 +116,6 @@ async function savePerson(persona) {
 
 function updatePerson(persona) {
     showSpinner();
-
     fetch(apiUrl, {
         method: 'PUT',
         headers: {
@@ -266,7 +265,6 @@ function showDeleteForm(id) {
     getElementById("abmApellido").value = persona.apellido;
     getElementById("abmFecha").value = persona.fechaNacimiento;
 
-    // Hacer todos los campos readonly
     Array.from(document.querySelectorAll('#formularioAbm input, #formularioAbm select')).forEach(element => {
         element.readOnly = true;
         element.disabled = true;
